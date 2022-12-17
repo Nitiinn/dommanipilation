@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2>Welcome</h2>
+<form onsubmit="savetolocalstorage(event)">
+	
+
+<p>
+	<label>Name : <input type="text" name="Username" /></label>
+	</p>
+
+
+	
+
+<p>
+	<label>EmailId : <input type="text" name="emailId" /></label>
+	</p>
+
+
+	
+
+<p>
+	<button type="submit">Submit</button>
+	</p>
+
+
+</form>
+<script>
+    function savetolocalstorage(event)
+    {
+        event.preventDefault();
+        var name = event.target.Username.value;
+        var email = event.target.emailId.value;
+        localStorage.setItem('name',name);
+        localStorage.setItem('email',email);
+
+    }
+</script>
+</body>
+</html>
