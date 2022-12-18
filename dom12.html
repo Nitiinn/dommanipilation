@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2 >Welcome to appointment app</h2>
+<form onsubmit="savetolocalstorage(event)">
+<p>
+	<label>Name : <input type="text" name="Username" /></label>
+	
+	<label>EmailId : <input type="text" name="emailId" /></label>
+	
+  <label>phonenumber : <input type="number" name="phone" /></label>
+  </p>
+<p>
+	<button type="submit">Submit</button>
+	</p>
+</form>
+<ul id = 'listOfUser'></ul>
+<script>
+    function savetolocalstorage(event)
+    {
+        event.preventDefault();
+        var name = event.target.Username.value;
+        var email = event.target.emailId.value;
+        var phonenumber = event.target.phone.value;
+        // localStorage.setItem('name',name);
+        // localStorage.setItem('email',email);
+        // let user_records=new Array();
+        // user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+        const obj = {
+          name,
+          email,
+          phonenumber
+        }
+        localStorage.setItem(obj.email,JSON.stringify(obj));
+        showNewUserOnScreen(obj)
+        
+}
+function showNewUserOnScreen(user)
+{
+  const parentNode = document.getElementById('listOfUser');
+  const childHTML = `<li style="font-family:verdana;"> ${user.name} - ${user.email} 
+    <button onclick=deleteUser('${user.email}')> Delete User </button>
+    </li>`
+  parentNode.innerHTML = parentNode.innerHTML + childHTML;
+}
+
+
+</script>
+</body>
+</html>
