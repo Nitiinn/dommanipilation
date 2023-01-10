@@ -2,6 +2,7 @@ const posts = [
   { title: "Post One", body: "This is post one", createdAt: new Date().getTime() },
   { title: "Post Two", body: "This is post two",createdAt: new Date().getTime()},
 ];
+
 let intervalId = 0;
 function getPosts() {
   setTimeout(() => {
