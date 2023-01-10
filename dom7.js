@@ -32,19 +32,19 @@
 // itemlist.previousElementSibling.style.color = 'red';
 
 // create a element
-// var newdiv = document.createElement('div');
+ var newdiv = document.createElement('div');
 
 // // add class
-// newdiv.className = 'hello class';
+ newdiv.className = 'hello class';
 
 // // add id
-// newdiv.id = 'hello1';
+ newdiv.id = 'hello1';
 
 // // add attr
-// newdiv.setAttribute('title','hello attribute');
+ newdiv.setAttribute('title','hello attribute');
 
 // // create text node
-// var newdivtext = document.createTextNode('HEllo');
+ var newdivtext = document.createTextNode('HEllo');
 
 // // add text to div
 // newdiv.appendChild(newdivtext);

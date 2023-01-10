@@ -2,7 +2,7 @@
 // console.log(document.domain);
 // console.log(document.url);
 // console.log(document.title);
-// // document.title=123;
+// document.title=123;              // manipulate the header of the title.
 // console.log(document.doctype);
 
 var headertitle = document.getElementById('header-title');
