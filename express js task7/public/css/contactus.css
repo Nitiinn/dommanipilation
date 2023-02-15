@@ -1,0 +1,25 @@
+.form-group
+{
+    width: 550px;
+    background-color: white;
+            margin-left: 400px;
+            margin-right: 400px;
+            border-color: orange;
+            border-radius: 10px;
+    
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    background:orange;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+h1 {
+    text-align: center;
+  color: orange;
+
+}
